@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+            <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div class="heading">
+            <p>Truth and dare game</p>
+        </div>
+        <div class="ballon">
+            <img src="abc.png" style="height:200px;
+            width:100%">
+
+
+        </div>
+        <div class="button">
+        <button id="truth"> Click for a Truth</button>
+        <button id="dare">Click for a Dare</button>
+        </div>
+        <div id="box">
+            <p id="test"></p>
+        </div>
+        <button id="clear">Clear</button>
+
+    </div>
+
+  <script>
+
+var container=document.getElementById('container');
+var truths=document.getElementById('truth');
+var dares=document.getElementById('dare');
+var test=document.getElementById('test');
+var clear=document.getElementById('clear');
+
+
+
+
+//  var truthQues=[
+//     "What is the biggest lie you have ever told?",
+//     "What’s the last movie that made you cry?",
+//     "What’s the biggest secret you’ve kept from your parents?",
+//     "Have you ever fallen out of the bed, at midnight?",
+//     "Who loves you more among your parents and why?",
+//     "If You Could Make One Wish Right This Second, What Would It Be?",
+//     "What Is The Most Embarrassing Picture Of You?"
+// ];
+var truthQues=[
+   "What is the biggest lie you have ever told?",
+   "What’s the last movie that made you cry?",
+    "What’s the biggest secret you’ve kept from your parents?",
+    "Have you ever fallen out of the bed, at midnight?",
+    "Who loves you more among your parents and why?",
+    "If You Could Make One Wish Right This Second, What Would It Be?",
+    "What Is The Most Embarrassing Picture Of You?"
+];
+
+var dareQues=[
+    "Give someone your phone and let them send one text to anyone in your contacts.",
+    "Make every person in the group smile, keep going until everyone has cracked a smiled.",
+    "Eat one teaspoon of the spiciest thing you have in the kitchen.",
+    "Unlock your phone and hand it over to your partner."
+];
+
+
+// truths.addEventListener("click",function(){
+//     var randomTruth=truthQues[Math.floor(Math.random()*truthQues.length)];
+//     test.innerHtml=randomTruth;
+//     container.style.background=purple;
+
+    
+    
+// })
+truths.addEventListener("click",function(){
+    var randomTruth=truthQues[Math.floor(Math.random()*truthQues.length)];
+    test.innerHTML=randomTruth;
+    document.getElementById('box').style.background="purple";
+
+
+    
+
+})
+  
+
+dares.addEventListener("click",function(){
+    var randomDare=dareQues[Math.floor(Math.random()*dareQues.length)];
+    test.innerHTML=randomDare;
+     document.getElementById('box').style.background="coral";
+
+})
+clear.addEventListener("click",function(){
+    test.innerHTML="";
+})
+  
+  </script>
+</body>
+</html>
